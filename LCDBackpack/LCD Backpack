@@ -1,0 +1,22 @@
+
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h> 
+LiquidCrystal_I2C lcd(0x27,16,2); 
+LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
+int time=0;
+
+void setup();
+{
+	lcd.init();
+	lcd.backlight();
+	lcd.begin(16, 2);
+	lcd.setCursor(0, 0);
+    lcd.print("Hello World");
+}
+
+void loop();
+{
+	time = millis();	
+	lcd.setCursor(0, 1);
+	lcd.print(time/1000);
+}
