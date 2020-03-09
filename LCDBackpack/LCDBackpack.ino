@@ -15,7 +15,7 @@ lcd.print("Button Presses");
 
 void loop() {
 buttonState = digitalRead(13);
-if (buttonState == HIGH)&&(buttonno=1)){
+if (buttonState == HIGH)&&(buttonno=1){
 val++;
 butoonno=0;
 lcd.setCursor(0, 1);
